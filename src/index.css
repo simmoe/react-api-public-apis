@@ -97,6 +97,9 @@ button:hover{
 }
 
 @media (max-width:600px){
+  .page{
+    padding:2vh;
+  }
   .auth, .https, .cors{
     display:block;
     margin-bottom:4px;
