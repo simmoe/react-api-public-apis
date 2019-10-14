@@ -52,6 +52,7 @@ const Main = (props) => {
         <div className="page">
             <h1>Public API search</h1>
             <p>Looking for an interesting API to use in your project? Use this page to get relevant suggestions for open and free API's all over the internet. Choose a category and hit search, or submit an optional search term to filter results. </p>
+            <p><a href="https://github.com/simmoe/react-api-public-apis">Get code or contribute on Github</a></p>
             <form onSubmit={handleSubmit}>
                 <select onChange={onSelect}>
                     {cats.map((name, index)=>{
