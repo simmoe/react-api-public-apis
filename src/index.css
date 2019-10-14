@@ -15,7 +15,7 @@ body{
   width:100vw;
   display:grid;
   padding:10vh;
-  grid-template-columns: minmax(200px, 800px);
+  grid-template-columns: minmax(150px, 800px);
   justify-content:center;
   align-items:center;
   gap:40px;
@@ -94,4 +94,11 @@ button:hover{
   background-color:#f8f8f8;
   cursor: pointer;
   border:1px solid gray;
+}
+
+@media (max-width:600px){
+  .auth, .https, .cors{
+    display:block;
+    margin-bottom:4px;
+  }
 }
