@@ -20,15 +20,18 @@ const Main = (props) => {
         })
         .catch(e => console.log('error', e));
     
+    //Set optional search term
     const onChange = (event) => {
         setTerm(event.target.value)
     }
 
+    //Change category and reset search term
     const onSelect = (event) => {
         setCategory(event.target.value)
         setTerm('')
     }
 
+    //Fetch api data with the category and search term parameters
     const handleSubmit = (event) => {
         event.preventDefault();
         const c = encodeURIComponent(category)
@@ -39,7 +42,7 @@ const Main = (props) => {
         fetch(url)
             .then(response => response.json())
             .then(data => {
-                console.log(data)
+                //console.log(data)
                 data.entries !== null ? setApis(data.entries) : setApis ([{API:'no results'}])
             })
             .catch(e => console.log('error', e));
@@ -47,6 +50,8 @@ const Main = (props) => {
 
     return (
         <div className="page">
+            <h1>Public API search</h1>
+            <p>Looking for an interesting API to use in your project? Use this page to get relevant suggestions for open and free API's all over the internet. Choose a category and hit search, or submit an optional search term to filter results. </p>
             <form onSubmit={handleSubmit}>
                 <select onChange={onSelect}>
                     {cats.map((name, index)=>{
