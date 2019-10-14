@@ -53,8 +53,8 @@ const Main = (props) => {
                         return <option key={index} value={name}>{name}</option>
                     })}
                 </select>
-                <input placeholder="write an optional searchphrase" onChange={onChange} type="text" name="" value={term} />
-                <button>Search!</button>
+                <input placeholder="term (optional)" onChange={onChange} type="text" name="" value={term} />
+                <button>Search</button>
                 </form>
                 <section className="section">
                     {apis.map((row, rowindex) => {
