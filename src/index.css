@@ -18,7 +18,7 @@ body{
   grid-template-columns: minmax(150px, 800px);
   justify-content:center;
   align-items:center;
-  gap:40px;
+  gap:1rem;
 }
 
 section{
@@ -71,6 +71,9 @@ a{
   color:#118DF0;
 }
 
+form{
+  margin-top:1rem;
+}
 input, button, select{
   margin-bottom:8px;
   height:2rem;
@@ -100,8 +103,7 @@ button:hover{
   .page{
     padding:2vh;
   }
-  .auth, .https, .cors{
-    display:block;
-    margin-bottom:4px;
+  h1{
+    padding:0;
   }
 }
